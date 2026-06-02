@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+
+  <!-- Shared Header Navigation -->
+  <%- include('../components/navbar.html') %>
+
+  <!-- Breadcrumb Header -->
+  <div class="breadcrumb-wrap">
+    <h2>Career Guidance Center</h2>
+    <ul class="breadcrumbs">
+      <li><a href="/">Home</a></li>
+      <li class="active">Career Guidance</li>
+    </ul>
+  </div>
+
+  <div class="subpage-container">
+    
+    <div class="section-header" data-aos="fade-up">
+      <span>Future Career Roadmaps</span>
+      <h2>Plan Your Academic & Technical Roadmap</h2>
+      <p>Select your stream and interests to generate a structured timeline for software engineering, medical careers, civil services, or AI research.</p>
+    </div>
+
+    <!-- Interactive Career Roadmap Generator Form -->
+    <div class="roadmap-form" data-aos="fade-up">
+      <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; text-align: center; color: #fff;">Interactive Career Roadmap Builder</h3>
+      
+      <div class="form-group">
+        <label>Your Current Stream / Class</label>
+        <select id="roadmapStream">
+          <option value="Science PCM">Science (Physics, Chemistry, Maths)</option>
+          <option value="Science PCB">Science (Physics, Chemistry, Biology)</option>
+          <option value="Commerce">Commerce & Accounting</option>
+          <option value="Humanities">Humanities & Social Sciences</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>Your Career Interests</label>
+        <input type="text" id="roadmapInterests" placeholder="e.g. AI Engineer, Surgeon, Civil Services (IAS/PCS), Startup founder">
+      </div>
+
+      <button onclick="generateRoadmap()" class="btn btn-primary btn-glow" style="width: 100%; margin-top: 1rem;">Generate Roadmap</button>
+    </div>
+
+    <!-- Output Roadmap display block -->
+    <div class="roadmap-output" id="roadmapOutputBlock" style="display: none;" data-aos="fade-up">
+      <h3 style="color:var(--accent-cyan); font-size:1.5rem; margin-bottom:1.5rem; border-bottom:1px solid var(--glass-border); padding-bottom:0.75rem;">Your Custom Career Pathway</h3>
+      <div id="roadmapResultContent" style="line-height:1.8; color:var(--text-main);"></div>
+    </div>
+
+    <!-- ==========================================
+         SECTION 2: STATIC PATHWAY DETAILS (SEO RICH)
+         ========================================== -->
+    <div class="section-header" style="margin-top: 6rem;" data-aos="fade-up">
+      <span>Established Pathways</span>
+      <h2>Core Professional Career Directions</h2>
+      <p>Comprehensive step-by-step career path structures compiled by our counseling team.</p>
+    </div>
+
+    <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));" data-aos="fade-up">
+      
+      <!-- Path 1 -->
+      <div class="feature-card tilt-card">
+        <div class="icon-wrap cyan"><i class="fas fa-code"></i></div>
+        <h3>AI & Software Engineering</h3>
+        <p><strong>Path:</strong> Class 10/12 (Science PCM) ➔ B.Tech/B.Sc Computer Science ➔ Software Developer / Machine Learning Architect.</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Focus on coding algorithms, python syntax, databases, and prompt engineering inside our NextGen labs.</p>
+      </div>
+
+      <!-- Path 2 -->
+      <div class="feature-card tilt-card">
+        <div class="icon-wrap violet"><i class="fas fa-stethoscope"></i></div>
+        <h3>Medical & Biotech Sciences</h3>
+        <p><strong>Path:</strong> Class 10/12 (Science PCB) ➔ Clears NEET Exam ➔ MBBS / BDS / B.Pharm ➔ Specialization Residency.</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Focus on biology diagrams, organic chemical equations, and diagnostic metrics guidance.</p>
+      </div>
+
+      <!-- Path 3 -->
+      <div class="feature-card tilt-card">
+        <div class="icon-wrap gold"><i class="fas fa-landmark"></i></div>
+        <h3>Civil Services & Administration</h3>
+        <p><strong>Path:</strong> Secondary Boards (Any Stream) ➔ Degree Graduation ➔ UPSC / UPPSC preparation ➔ Civil Service.</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Develop analytical general knowledge, logical reasoning, and essay formulation skills.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- AI Chatbot Floating Widget -->
+  <%- include('../components/chat-widget.html') %>
+
+  <!-- Shared Footer -->
+  <%- include('../components/footer.html') %>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/app.js"></script>
+  <script>
+    async function generateRoadmap() {
+      const stream = document.getElementById('roadmapStream').value;
+      const interests = document.getElementById('roadmapInterests').value.trim();
+      
+      if (!interests) {
+        alert('Please enter your career interests');
+        return;
+      }
+
+      const outputBlock = document.getElementById('roadmapOutputBlock');
+      const content = document.getElementById('roadmapResultContent');
+      
+      outputBlock.style.display = 'block';
+      content.innerHTML = '<p><i class="fas fa-spinner fa-spin"></i> Compiling career roadmap timelines from AI counsellor databases...</p>';
+
+      try {
+        const response = await fetch('/api/career-guidance', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ stream, interests })
+        });
+        const result = await response.json();
+        if (result.success) {
+          content.innerHTML = result.roadmap.replace(/\n/g, '<br>');
+        } else {
+          content.innerHTML = '<p style="color:red">Failed to load roadmap options. Try again later.</p>';
+        }
+      } catch (e) {
+        content.innerHTML = '<p style="color:red">Connection failed. Check server status.</p>';
+      }
+    }
+  </script>
+  <script src="/js/animations.js"></script>
+
+</body>
+</html>

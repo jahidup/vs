@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body style="background: var(--bg-primary);">
+
+  <div class="admin-dashboard-wrap">
+    <!-- Shared Admin Sidebar -->
+    <%- include('../components/admin-sidebar.html') %>
+
+    <!-- Main Workspace Area -->
+    <div class="admin-main-content">
+      <div class="admin-header">
+        <div>
+          <h2 style="font-size: 2rem;">Workshops & Events Manager</h2>
+          <span style="color:var(--text-muted); font-size:0.9rem;">Schedule upcoming technology hackathons, guest lectures, and parent councils.</span>
+        </div>
+      </div>
+
+      <div class="crud-manager-layout">
+        <!-- 1. Catalog List -->
+        <div class="table-card">
+          <h3 style="margin-bottom:1rem">Scheduled Events</h3>
+          <div id="adminEventsManager">
+            <i class="fas fa-spinner fa-spin" style="color:var(--accent-cyan)"></i> Loading scheduled list...
+          </div>
+        </div>
+
+        <!-- 2. Form to Add New Event -->
+        <div class="roadmap-form" style="margin:0; width:100%">
+          <h3 style="color:#fff; font-size:1.2rem; margin-bottom:1.5rem">Schedule Event Node</h3>
+          
+          <form id="newEventForm">
+            <div class="form-group">
+              <label>Event / Workshop Title</label>
+              <input type="text" id="evtTitle" required placeholder="e.g. Kushinagar Arduino Coding Hackathon">
+            </div>
+
+            <div class="form-group">
+              <label>Date Description</label>
+              <input type="text" id="evtDate" required placeholder="e.g. June 15, 2026">
+            </div>
+
+            <div class="form-group">
+              <label>Venue Location</label>
+              <input type="text" id="evtVenue" required placeholder="e.g. Robotics Center workbench">
+            </div>
+
+            <div class="form-group">
+              <label>Event Description</label>
+              <textarea id="evtDesc" rows="3" required placeholder="Brief outline of target activities..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-glow" style="width: 100%; margin-top: 1rem;">Schedule Event</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+
+  <!-- Shared Header Navigation -->
+  <%- include('../components/navbar.html') %>
+
+  <!-- Breadcrumb Header -->
+  <div class="breadcrumb-wrap">
+    <h2>NextGen Innovation Labs</h2>
+    <ul class="breadcrumbs">
+      <li><a href="/">Home</a></li>
+      <li class="active">NextGen Labs</li>
+    </ul>
+  </div>
+
+  <div class="subpage-container">
+    
+    <div class="section-header" data-aos="fade-up">
+      <span>Future Skills Academy</span>
+      <h2>State-of-the-Art Technology Centers</h2>
+      <p>Inside our specialized laboratories where board preparations meet practical application, robotics wiring, and coding compiles.</p>
+    </div>
+
+    <!-- 1. AI & Machine Learning Lab -->
+    <div class="lab-card" data-aos="fade-up">
+      <div class="lab-desc">
+        <h3>Artificial Intelligence & Coding Lab</h3>
+        <p>This lab functions as our software hub. Students write program scripts in Python, explore data analytics foundations, learn web engineering, and work with Generative AI tools. The classroom is equipped with high-speed processors and high-definition smart boards to visualize code flows and data models.</p>
+        <ul class="lab-spec-list">
+          <li><i class="fas fa-microchip"></i> High-performance computer nodes.</li>
+          <li><i class="fas fa-terminal"></i> Python, HTML5, CSS3, Javascript setups.</li>
+          <li><i class="fas fa-brain"></i> Dataset training & Prompt Engineering tools.</li>
+        </ul>
+      </div>
+      <div class="lab-visual">
+        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=800&q=80" alt="AI Coding Lab" class="tilt-card" style="width:100%">
+      </div>
+    </div>
+
+    <!-- 2. Robotics & Electronics Workbench -->
+    <div class="lab-card reverse" data-aos="fade-up">
+      <div class="lab-visual">
+        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Robotics Lab" class="tilt-card" style="width:100%">
+      </div>
+      <div class="lab-desc">
+        <h3>Robotics & Embedded Systems Lab</h3>
+        <p>This workbench teaches students how to combine code with physical hardware. Using Arduino microcontrollers, servo motors, breadboard layouts, and sensor modules, students build smart autonomous devices that measure, move, and solve local problems.</p>
+        <ul class="lab-spec-list">
+          <li><i class="fas fa-cogs"></i> Arduino microcontroller development kits.</li>
+          <li><i class="fas fa-wifi"></i> Sensors interfacing (Ultrasonic, IR, Temperature).</li>
+          <li><i class="fas fa-bolt"></i> Electronic breadboarding & Ohm's law analyzers.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Drone Learning & IoT Center -->
+    <div class="lab-card" data-aos="fade-up">
+      <div class="lab-desc">
+        <h3>Drone Technology & IoT Projects</h3>
+        <p>A specialized lab where students study quadcopter kinematics and telemetry loggers. We cover motor thrust ratios, Electronic Speed Controllers (ESC), GPS positioning systems, and drone assembly steps. In IoT, we build nodes that transmit sensor metrics to remote web servers.</p>
+        <ul class="lab-spec-list">
+          <li><i class="fas fa-paper-plane"></i> Quadcopter assembly & calibration kits.</li>
+          <li><i class="fas fa-broadcast-tower"></i> Internet of Things ESP8266 WiFi nodes.</li>
+          <li><i class="fas fa-network-wired"></i> Remote telemetry dashboard monitoring.</li>
+        </ul>
+      </div>
+      <div class="lab-visual">
+        <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80" alt="Drone IoT Lab" class="tilt-card" style="width:100%">
+      </div>
+    </div>
+
+    <!-- 4. Startup & Research Incubator -->
+    <div class="lab-card reverse" data-aos="fade-up">
+      <div class="lab-visual">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Startup Awareness" class="tilt-card" style="width:100%">
+      </div>
+      <div class="lab-desc">
+        <h3>Startup Awareness & Student Innovation</h3>
+        <p>We believe rural technical innovation must lead to entrepreneurship. In this center, students learn how to design software startups, manage database servers, construct logic business pitches, and apply technical skills to rural agriculture, supply chains, and green transport.</p>
+        <ul class="lab-spec-list">
+          <li><i class="fas fa-chart-line"></i> Business pitching & logic analysis training.</li>
+          <li><i class="fas fa-database"></i> Cloud database & API development basics.</li>
+          <li><i class="fas fa-seedling"></i> Agro-tech prototype development zone.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AI Chatbot Floating Widget -->
+  <%- include('../components/chat-widget.html') %>
+
+  <!-- Shared Footer -->
+  <%- include('../components/footer.html') %>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/app.js"></script>
+  <script src="/js/animations.js"></script>
+
+</body>
+</html>

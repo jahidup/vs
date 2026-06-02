@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /courses
+Allow: /faculty
+Allow: /gallery
+Allow: /contact
+Allow: /results
+Allow: /ai-learning
+Allow: /ai-assistant
+Allow: /nextgen-labs
+Allow: /robotics-center
+Allow: /digital-campus
+Allow: /career-guidance
+Allow: /success-stories
+
+# Disallow private administrative directories
+Disallow: /admin
+Disallow: /admin-dashboard
+Disallow: /admin-results
+Disallow: /admin-gallery
+Disallow: /admin-events
+Disallow: /admin-programs
+Disallow: /admin-inquiries
+Disallow: /admin-leads
+Disallow: /api/admin/
+
+Sitemap: https://www.sankalpdigitalpathshala.online/sitemap.xml

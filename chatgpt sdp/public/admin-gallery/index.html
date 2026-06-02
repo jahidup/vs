@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body style="background: var(--bg-primary);">
+
+  <div class="admin-dashboard-wrap">
+    <!-- Shared Admin Sidebar -->
+    <%- include('../components/admin-sidebar.html') %>
+
+    <!-- Main Workspace Area -->
+    <div class="admin-main-content">
+      <div class="admin-header">
+        <div>
+          <h2 style="font-size: 2rem;">Photo Gallery Manager</h2>
+          <span style="color:var(--text-muted); font-size:0.9rem;">Upload campus images, robotics projects, and workshop pictures.</span>
+        </div>
+      </div>
+
+      <div class="crud-manager-layout">
+        <!-- 1. Catalog List -->
+        <div class="table-card">
+          <h3 style="margin-bottom:1rem">Registered Photos</h3>
+          <div id="adminGalleryManager">
+            <i class="fas fa-spinner fa-spin" style="color:var(--accent-cyan)"></i> Loading photos...
+          </div>
+        </div>
+
+        <!-- 2. Form to Add New Image -->
+        <div class="roadmap-form" style="margin:0; width:100%">
+          <h3 style="color:#fff; font-size:1.2rem; margin-bottom:1.5rem">Upload Image Asset</h3>
+          
+          <form id="newGalleryForm">
+            <div class="form-group">
+              <label>Photo Title</label>
+              <input type="text" name="title" required placeholder="e.g. Drone assembly class 2026">
+            </div>
+            
+            <div class="form-group">
+              <label>Asset Category</label>
+              <select name="category">
+                <option value="Classroom">Smart Classroom</option>
+                <option value="Robotics">Robotics Lab</option>
+                <option value="AI">AI Learning Center</option>
+                <option value="Computer Lab">Computer Lab</option>
+                <option value="Library">Library</option>
+                <option value="Students">Students Activities</option>
+                <option value="Faculty">Faculty Members</option>
+                <option value="Campus">Campus Infrastructure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Description Note</label>
+              <textarea name="description" rows="2" placeholder="Brief caption details..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Select Photo File</label>
+              <input type="file" name="photo" accept="image/*" required style="padding:0.4rem">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-glow" style="width: 100%; margin-top: 1rem;">Upload Image</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/dashboard.js"></script>
+
+</body>
+</html>

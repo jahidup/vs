@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+
+  <!-- Shared Header Navigation -->
+  <%- include('../components/navbar.html') %>
+
+  <!-- Breadcrumb Header -->
+  <div class="breadcrumb-wrap">
+    <h2>AI-Powered Learning Ecosystem</h2>
+    <ul class="breadcrumbs">
+      <li><a href="/">Home</a></li>
+      <li class="active">AI Learning</li>
+    </ul>
+  </div>
+
+  <div class="subpage-container">
+    
+    <!-- Hero intro -->
+    <div class="about-grid" data-aos="fade-up">
+      <div class="about-text">
+        <h3>How Artificial Intelligence Empowers Rural Students</h3>
+        <p>Sankalp Digital Pathshala does not treat AI as a future concept. It is integrated directly into our teaching methodology. Our student portal offers access to advanced semantic solving engines driven by Google Gemini. Rural students in Kushinagar can ask academic questions, review Python algorithms, scan textbook diagrams, and generate dynamic study timetables instantly.</p>
+        <p>This digital mentoring ensures that learning doesn't stop after classroom hours. Students who require extra help with boards homework or competitive JEE equations can consult our chatbot. It is configured to respond in English, Hindi, and Hinglish, matching the natural language preferences of our student community.</p>
+        <a href="/ai-assistant" class="btn btn-primary btn-glow">Launch AI Assistant</a>
+      </div>
+      <div class="about-visual">
+        <img src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&w=800&q=80" alt="Artificial Intelligence Education" class="tilt-card" style="border-radius: 20px;">
+      </div>
+    </div>
+
+    <!-- AI Features Breakdown Grid -->
+    <div class="section-header" style="margin-top: 6rem;" data-aos="fade-up">
+      <span>Smart Modules</span>
+      <h2>Core AI Components & Features</h2>
+      <p>Providing 24/7 technical mentorship to clear doubts, organize schedules, and build technical capabilities.</p>
+    </div>
+
+    <div class="features-grid" data-aos="fade-up">
+      
+      <!-- Feature 1 -->
+      <div class="feature-card tilt-card">
+        <div class="icon-wrap cyan"><i class="fas fa-comments"></i></div>
+        <h3>Conversational AI Mentor</h3>
+        <p>A smart mentoring chatbot that answers course questions, debugs Python loops, and provides guidance in Hindi, English, and Hinglish.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card tilt-card">
+        <div class="icon-wrap violet"><i class="fas fa-file-invoice"></i></div>
+        <h3>AI Scientific Question Solver</h3>
+        <p>Step-by-step mathematical, algebraic, and chemical equation solutions generated instantly with clear conceptual proofs.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card tilt-card">
+        <div class="icon-wrap gold"><i class="fas fa-calendar-alt"></i></div>
+        <h3>AI Study Planner</h3>
+        <p>Enter your class details and target topics to receive a structured daily study schedule, balancing board prep and hardware lab practice.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-card tilt-card">
+        <div class="icon-wrap cyan"><i class="fas fa-camera"></i></div>
+        <h3>OCR Diagram Solver</h3>
+        <p>Scan diagrams or upload worksheets from your mobile device. The AI extracts coordinates and labels to solve science problems.</p>
+      </div>
+
+    </div>
+
+    <!-- AI in Agriculture & Robotics integration -->
+    <div class="about-grid" style="margin-top: 6rem;" data-aos="fade-up">
+      <div class="about-visual">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Robotics Interfacing" class="tilt-card" style="border-radius: 20px;">
+      </div>
+      <div class="about-text">
+        <h3>Applying Machine Learning to Practical Projects</h3>
+        <p>Our students do not just chat with AI; they learn how it works. Our Future Skills curriculum introduces Python programming, dataset compilation, and basic neural network loops. Under the guidance of Jahid, students build practical local projects:</p>
+        <ul class="lab-spec-list">
+          <li><i class="fas fa-check-circle" style="color:var(--accent-cyan)"></i> <strong>Smart Crop Assessor:</strong> A camera sensor kit running classification code to detect local leaf rust.</li>
+          <li><i class="fas fa-check-circle" style="color:var(--accent-cyan)"></i> <strong>AI Waste Segregator:</strong> Interfacing camera inputs with servo drivers to sort recyclables.</li>
+          <li><i class="fas fa-check-circle" style="color:var(--accent-cyan)"></i> <strong>Weather Prediction Node:</strong> Logging humidity sensors to forecast localized rain for Salemgarh fields.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AI Chatbot Floating Widget -->
+  <%- include('../components/chat-widget.html') %>
+
+  <!-- Shared Footer -->
+  <%- include('../components/footer.html') %>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/app.js"></script>
+  <script src="/js/animations.js"></script>
+
+</body>
+</html>
