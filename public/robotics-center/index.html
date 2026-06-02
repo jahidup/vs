@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+
+  <!-- Shared Header Navigation -->
+  <%- include('../components/navbar.html') %>
+
+  <!-- Breadcrumb Header -->
+  <div class="breadcrumb-wrap">
+    <h2>AI & Robotics Innovation Center</h2>
+    <ul class="breadcrumbs">
+      <li><a href="/">Home</a></li>
+      <li class="active">AI & Robotics</li>
+    </ul>
+  </div>
+
+  <div class="subpage-container">
+    
+    <div class="section-header" data-aos="fade-up">
+      <span>Showcase of Builders</span>
+      <h2>Robotics Workbenches & Student Innovations</h2>
+      <p>Inside our hardware integration lab where students assemble circuits, calibrate quadcopters, and model machine learning parameters.</p>
+    </div>
+
+    <!-- 1. Showcase of Student Projects -->
+    <div class="about-grid" data-aos="fade-up">
+      <div class="about-text">
+        <h3>Building Real Solutions for Salemgarh</h3>
+        <p>Our robotics center goes beyond theoretical physics formulas. We teach students how to write physical C code to read digital pins and drive actuators. Our students develop solutions designed to address challenges in agriculture, electricity conservation, and automated recycling in Tamkuhi region.</p>
+        <p>By wiring microcontrollers, configuring solar tracking arrays, and interfacing wireless ESP8266 nodes, students learn electronics, physics, mathematics, and code optimization simultaneously. This practical understanding solidifies their secondary school physics syllabus while providing real computational skills.</p>
+      </div>
+      <div class="about-visual">
+        <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80" alt="Robotics Development" class="tilt-card" style="border-radius: 20px;">
+      </div>
+    </div>
+
+    <!-- 2. Interactive Projects Grid -->
+    <div class="section-header" style="margin-top: 6rem;" data-aos="fade-up">
+      <span>Our Tech Showcase</span>
+      <h2>Featured Student Hardware Projects</h2>
+    </div>
+
+    <div class="features-grid" data-aos="fade-up">
+      
+      <!-- Project 1 -->
+      <div class="feature-card tilt-card">
+        <div class="icon-wrap cyan"><i class="fas fa-seedling"></i></div>
+        <h3>Smart Automated Irrigation</h3>
+        <p>Built using soil moisture sensors, liquid solenoid valves, and ESP8266 microcontrollers. It monitors crop dryness levels and waters local plants automatically, sending logging data to a student web portal.</p>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="feature-card tilt-card">
+        <div class="icon-wrap violet"><i class="fas fa-trash-alt"></i></div>
+        <h3>AI Trash sorter</h3>
+        <p>Interfaced a USB camera module with a Raspberry Pi running basic classification code. It recognizes plastic, metal, and compostable trash, triggering servo gates to sort waste.</p>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="feature-card tilt-card">
+        <div class="icon-wrap gold"><i class="fas fa-plane"></i></div>
+        <h3>Gesture Controlled Drone</h3>
+        <p>Quadcopter model assembled by secondary students utilizing MPU6050 gyroscope sensors and RF transmitter nodes. It translates hand movements into steady flight telemetry commands.</p>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="feature-card tilt-card">
+        <div class="icon-wrap cyan"><i class="fas fa-bolt"></i></div>
+        <h3>Solar Tracker Array</h3>
+        <p>Uses Light Dependent Resistors (LDR) to track light angles, rotating small solar panels dynamically to maximize efficiency. Teaches physics calculations for light angles and panel dynamics.</p>
+      </div>
+
+    </div>
+
+    <!-- 3. Workshops & Hackathons info -->
+    <div class="about-grid" style="margin-top: 6rem;" data-aos="fade-up">
+      <div class="about-visual">
+        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80" alt="Robotics Hackathon" class="tilt-card" style="border-radius: 20px;">
+      </div>
+      <div class="about-text">
+        <h3>Rural Innovation Workshops & Hackathons</h3>
+        <p>Every quarter, Sankalp Digital Pathshala organizes the <strong>Kushinagar Rural Hackathon</strong>. This 24-hour event brings young innovators together to build functional technical solutions under mentorship. The workshops teach circuit debugging, Python syntax optimization, and user interface design. Top performing teams receive scholarships, certifications, and project display opportunities in our showcase hall.</p>
+        <a href="/contact" class="btn btn-primary btn-glow">Register for Next Hackathon</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AI Chatbot Floating Widget -->
+  <%- include('../components/chat-widget.html') %>
+
+  <!-- Shared Footer -->
+  <%- include('../components/footer.html') %>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/app.js"></script>
+  <script src="/js/animations.js"></script>
+
+</body>
+</html>

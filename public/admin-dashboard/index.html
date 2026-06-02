@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body style="background: var(--bg-primary);">
+
+  <div class="admin-dashboard-wrap" id="adminDashboardAnalytics">
+    <!-- Shared Admin Sidebar -->
+    <%- include('../components/admin-sidebar.html') %>
+
+    <!-- Main Workspace Area -->
+    <div class="admin-main-content">
+      <div class="admin-header">
+        <div>
+          <h2 style="font-size: 2rem;">Overview & Analytics Dashboard</h2>
+          <span style="color:var(--text-muted); font-size:0.9rem;">Real-time metrics, inquiry tracking, and lead score evaluations.</span>
+        </div>
+        <button class="btn btn-secondary btn-sm" onclick="loadDashboardMetrics()"><i class="fas fa-sync-alt"></i> Refresh Analytics</button>
+      </div>
+
+      <!-- Statistics Row -->
+      <div class="admin-stats-grid">
+        <div class="admin-stat-card">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h3 id="metricTotalInquiries">0</h3>
+            <span>Total Inquiries</span>
+          </div>
+        </div>
+        <div class="admin-stat-card">
+          <i class="fas fa-robot"></i>
+          <div>
+            <h3 id="metricAILeads">0</h3>
+            <span>AI Leads Logged</span>
+          </div>
+        </div>
+        <div class="admin-stat-card">
+          <i class="fas fa-question-circle"></i>
+          <div>
+            <h3 id="metricAIQuestions">0</h3>
+            <span>AI Questions Solved</span>
+          </div>
+        </div>
+        <div class="admin-stat-card">
+          <i class="fas fa-book"></i>
+          <div>
+            <h3 id="metricPrograms">0</h3>
+            <span>Active Courses</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Tables Row -->
+      <div class="dashboard-tables">
+        <!-- 1. Recent Inquiries Card -->
+        <div class="table-card">
+          <h3>Recent General Inquiries</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Phone</th>
+                <th>Course</th>
+                <th>Status</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="recentInquiriesTableBody">
+              <tr>
+                <td colspan="5" style="text-align:center"><i class="fas fa-spinner fa-spin"></i> Contacting CRM database...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 2. Recent AI Leads Card -->
+        <div class="table-card">
+          <h3>Recent AI Leads (Lead Scoring)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Interest</th>
+                <th>Score</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="recentAILeadsTableBody">
+              <tr>
+                <td colspan="4" style="text-align:center"><i class="fas fa-spinner fa-spin"></i> Parsing interaction scores...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/dashboard.js"></script>
+
+</body>
+</html>

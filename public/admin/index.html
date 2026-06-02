@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body style="background: var(--bg-primary);">
+
+  <!-- Aurora background spots -->
+  <div class="aurora-bg">
+    <div class="aurora-spot aurora-1"></div>
+    <div class="aurora-spot aurora-2"></div>
+  </div>
+
+  <div class="subpage-container">
+    <div class="admin-login-card tilt-card">
+      <h2>SDP Admin Panel</h2>
+      
+      <div id="loginMessageBox" class="message-box"></div>
+      
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <label>Administrator Email</label>
+          <input type="email" id="loginEmail" required placeholder="admin@sankalppathshala.com" value="admin@sankalppathshala.com">
+        </div>
+        <div class="form-group">
+          <label>Secure Password</label>
+          <input type="password" id="loginPassword" required placeholder="••••••••" value="admin123">
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-glow" style="width: 100%; margin-top: 1rem;">Authenticate Session</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Shared Footer -->
+  <%- include('../components/footer.html') %>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/dashboard.js"></script>
+  <script src="/js/animations.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body style="background: var(--bg-primary);">
+
+  <div class="admin-dashboard-wrap">
+    <!-- Shared Admin Sidebar -->
+    <%- include('../components/admin-sidebar.html') %>
+
+    <!-- Main Workspace Area -->
+    <div class="admin-main-content">
+      <div class="admin-header">
+        <div>
+          <h2 style="font-size: 2rem;">Board Results Toppers Manager</h2>
+          <span style="color:var(--text-muted); font-size:0.9rem;">Register board exam high-rankers and competitive test qualifiers.</span>
+        </div>
+      </div>
+
+      <div class="crud-manager-layout">
+        <!-- 1. Catalog List -->
+        <div class="table-card">
+          <h3 style="margin-bottom:1rem">Registered Toppers</h3>
+          <div id="adminResultsManager">
+            <i class="fas fa-spinner fa-spin" style="color:var(--accent-cyan)"></i> Loading toppers list...
+          </div>
+        </div>
+
+        <!-- 2. Form to Add New Result -->
+        <div class="roadmap-form" style="margin:0; width:100%">
+          <h3 style="color:#fff; font-size:1.2rem; margin-bottom:1.5rem">Register Topper Card</h3>
+          
+          <form id="newResultsForm">
+            <div class="form-group">
+              <label>Student Full Name</label>
+              <input type="text" name="studentName" required placeholder="e.g. Priyanjali Maurya">
+            </div>
+
+            <div class="form-group">
+              <label>Examination Name</label>
+              <input type="text" name="examName" required placeholder="e.g. Class 12 Boards PCM, JEE Main">
+            </div>
+
+            <div class="form-group">
+              <label>Score achieved</label>
+              <input type="text" name="score" required placeholder="e.g. 98.4%, AIR 245">
+            </div>
+
+            <div class="form-group">
+              <label>Batch Year</label>
+              <input type="text" name="year" required placeholder="e.g. 2026">
+            </div>
+
+            <div class="form-group">
+              <label>Topper Description</label>
+              <textarea name="summary" rows="2" placeholder="Brief outline of accomplishments..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Student Photo File</label>
+              <input type="file" name="photo" accept="image/*" style="padding:0.4rem">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-glow" style="width: 100%; margin-top: 1rem;">Register topper</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/dashboard.js"></script>
+
+</body>
+</html>

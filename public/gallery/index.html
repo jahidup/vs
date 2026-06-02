@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+
+  <!-- Shared Header Navigation -->
+  <%- include('../components/navbar.html') %>
+
+  <!-- Breadcrumb Header -->
+  <div class="breadcrumb-wrap">
+    <h2>Ecosystem Photo Gallery</h2>
+    <ul class="breadcrumbs">
+      <li><a href="/">Home</a></li>
+      <li class="active">Gallery</li>
+    </ul>
+  </div>
+
+  <div class="subpage-container">
+    <div class="section-header" data-aos="fade-up">
+      <span>Our Campus Life</span>
+      <h2>Visual Walkthrough of SDP</h2>
+      <p>Peek inside our smart classrooms, computer coding hubs, and hardware innovation centers in Kushinagar.</p>
+    </div>
+
+    <!-- Category Filter Controls -->
+    <div class="courses-filter-wrap" data-aos="fade-up">
+      <button class="gallery-filter-btn active" data-filter="all">All Photos</button>
+      <button class="gallery-filter-btn" data-filter="classroom">Smart Classrooms</button>
+      <button class="gallery-filter-btn" data-filter="robotics">Robotics Lab</button>
+      <button class="gallery-filter-btn" data-filter="computer-lab">Coding & AI Lab</button>
+      <button class="gallery-filter-btn" data-filter="library">Digital Library</button>
+    </div>
+
+    <!-- Gallery Grid (Populated dynamically by public/js/gallery.js) -->
+    <div class="gallery-grid" id="galleryGrid" data-aos="fade-up">
+      
+      <!-- Static SEO Fallbacks (Automatically overridden by dynamic JS if connected) -->
+      <div class="gallery-card tilt-card" data-category="robotics">
+        <div class="gallery-img-wrap" onclick="openGalleryLightbox('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80', 'Robotics Hardware Interfacing')">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Robotics Lab">
+          <div class="img-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+        <div class="gallery-info">
+          <h3>Robotics Hardware Interfacing</h3>
+          <span class="category-badge">Robotics</span>
+          <p>Students programming Arduino microcontroller logic with ultrasonic sensor configurations.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card tilt-card" data-category="classroom">
+        <div class="gallery-img-wrap" onclick="openGalleryLightbox('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80', 'Smart Interactive Boards')">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Smart Board">
+          <div class="img-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+        <div class="gallery-info">
+          <h3>Smart Interactive Boards</h3>
+          <span class="category-badge">Classroom</span>
+          <p>Visual geometry and physics formula projections in our high-definition learning setups.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card tilt-card" data-category="computer-lab">
+        <div class="gallery-img-wrap" onclick="openGalleryLightbox('https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=800&q=80', 'Python & AI Programming')">
+          <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=800&q=80" alt="Coding">
+          <div class="img-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+        <div class="gallery-info">
+          <h3>Python & AI Programming</h3>
+          <span class="category-badge">Computer Lab</span>
+          <p>Students writing logical scripts and designing prompt inputs on terminal modules.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- AI Chatbot Floating Widget -->
+  <%- include('../components/chat-widget.html') %>
+
+  <!-- Shared Footer -->
+  <%- include('../components/footer.html') %>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/app.js"></script>
+  <script src="/js/gallery.js"></script>
+  <script src="/js/animations.js"></script>
+
+</body>
+</html>

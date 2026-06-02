@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+
+  <!-- Shared Header Navigation -->
+  <%- include('../components/navbar.html') %>
+
+  <!-- Breadcrumb Header -->
+  <div class="breadcrumb-wrap">
+    <h2>Explore Our Digital Campus</h2>
+    <ul class="breadcrumbs">
+      <li><a href="/">Home</a></li>
+      <li class="active">Digital Campus</li>
+    </ul>
+  </div>
+
+  <div class="subpage-container">
+    
+    <div class="section-header" data-aos="fade-up">
+      <span>Virtual Tour</span>
+      <h2>Salemgarh's Advanced Learning Environment</h2>
+      <p>Take a walkthrough of our physical and digital campus setups, designed to match the classroom standards of metropolitan institutions.</p>
+    </div>
+
+    <!-- 1. Smart Classrooms & Interactive Boards -->
+    <div class="lab-card" data-aos="fade-up">
+      <div class="lab-desc">
+        <h3>Smart Classrooms & Interactive Boards</h3>
+        <p>Our classrooms are equipped with high-definition digital smart boards. This allows mentors to display 3D models of chemical bonds, project geometric coordinate transformations, and run simulations for complex physics concepts. Rather than static textbook diagrams, students learn through interactive visual tools.</p>
+        <ul class="lab-spec-list">
+          <li><i class="fas fa-desktop"></i> High-definition touch-interactive boards.</li>
+          <li><i class="fas fa-photo-video"></i> 3D visual models for science classes.</li>
+          <li><i class="fas fa-wifi"></i> Seamless stream integration for guest lectures.</li>
+        </ul>
+      </div>
+      <div class="lab-visual">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Smart Board Classroom" class="tilt-card" style="width:100%">
+      </div>
+    </div>
+
+    <!-- 2. Computer & Coding Labs -->
+    <div class="lab-card reverse" data-aos="fade-up">
+      <div class="lab-visual">
+        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=800&q=80" alt="Computer Coding Lab" class="tilt-card" style="width:100%">
+      </div>
+      <div class="lab-desc">
+        <h3>High-Speed Computer & AI Labs</h3>
+        <p>Our computer laboratory provides access to modern processing terminals and high-speed internet. This is where students write and compile code, interface sensor kits, and access AI chatbot helpers. The lab is open to all students for coding practice and research.</p>
+        <ul class="lab-spec-list">
+          <li><i class="fas fa-laptop-code"></i> Linux & Windows terminal workstations.</li>
+          <li><i class="fas fa-network-wired"></i> High-speed broadband fiber connections.</li>
+          <li><i class="fas fa-shield-alt"></i> Safe internet filters for younger students.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Dynamic Library & Discussion Zone -->
+    <div class="lab-card" data-aos="fade-up">
+      <div class="lab-desc">
+        <h3>Technical Library & Collaborative Zones</h3>
+        <p>A quiet study and reference zone housing board textbooks, JEE/NEET manuals, robotics publications, and programming guidebooks. It includes a collaborative discussion area where students work on group code bases and design hackathon prototypes.</p>
+        <ul class="lab-spec-list">
+          <li><i class="fas fa-book"></i> Extensive repository of competitive textbooks.</li>
+          <li><i class="fas fa-users"></i> Collaborative study tables and whiteboards.</li>
+          <li><i class="fas fa-tablet-alt"></i> Digital tablets to access our E-book libraries.</li>
+        </ul>
+      </div>
+      <div class="lab-visual">
+        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" alt="Digital Library" class="tilt-card" style="width:100%">
+      </div>
+    </div>
+
+    <!-- 4. Counseling & Career Guidance Cell -->
+    <div class="lab-card reverse" data-aos="fade-up">
+      <div class="lab-visual">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Counseling Cell" class="tilt-card" style="width:100%">
+      </div>
+      <div class="lab-desc">
+        <h3>Counseling & Career Guidance Cell</h3>
+        <p>A private counseling room where students align their academic interests with technical career options. Mentors host weekly alignment sessions with parents, detailing student board results, python test scores, and university roadmap plans.</p>
+        <ul class="lab-spec-list">
+          <li><i class="fas fa-user-friends"></i> Private counselor tables.</li>
+          <li><i class="fas fa-road"></i> Custom academic roadmap worksheets.</li>
+          <li><i class="fas fa-university"></i> Comprehensive university entry guides.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AI Chatbot Floating Widget -->
+  <%- include('../components/chat-widget.html') %>
+
+  <!-- Shared Footer -->
+  <%- include('../components/footer.html') %>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/app.js"></script>
+  <script src="/js/animations.js"></script>
+
+</body>
+</html>

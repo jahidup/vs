@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body style="background: var(--bg-primary);">
+
+  <div class="admin-dashboard-wrap">
+    <!-- Shared Admin Sidebar -->
+    <%- include('../components/admin-sidebar.html') %>
+
+    <!-- Main Workspace Area -->
+    <div class="admin-main-content">
+      <div class="admin-header">
+        <div>
+          <h2 style="font-size: 2rem;">General Inquiries CRM</h2>
+          <span style="color:var(--text-muted); font-size:0.9rem;">Review incoming web inquiries, change lead follow-up status, and contact students.</span>
+        </div>
+      </div>
+
+      <!-- CRM Card Grid List -->
+      <div class="crm-leads-grid" id="crmInquiryList">
+        <div style="grid-column: 1/-1; text-align:center; padding:3rem;">
+          <i class="fas fa-spinner fa-spin fa-2x" style="color:var(--accent-cyan)"></i>
+          <p style="margin-top:1rem; color:var(--text-muted)">Querying inquiries database...</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/dashboard.js"></script>
+
+</body>
+</html>

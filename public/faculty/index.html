@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head.html') %>
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+
+  <!-- Shared Header Navigation -->
+  <%- include('../components/navbar.html') %>
+
+  <!-- Breadcrumb Header -->
+  <div class="breadcrumb-wrap">
+    <h2>Our Expert Faculty</h2>
+    <ul class="breadcrumbs">
+      <li><a href="/">Home</a></li>
+      <li class="active">Faculty</li>
+    </ul>
+  </div>
+
+  <div class="subpage-container">
+    <div class="section-header" data-aos="fade-up">
+      <span>Dedicated Mentors</span>
+      <h2>Guiding Minds, Shaping Technical Careers</h2>
+      <p>Our educators combine years of board coaching experience with hands-on computer engineering skills, providing an integrated dual-path learning approach.</p>
+    </div>
+
+    <!-- Faculty Cards Grid -->
+    <div class="faculty-grid" data-aos="fade-up">
+      
+      <!-- 1. Er. Jahid -->
+      <div class="faculty-card tilt-card">
+        <div class="faculty-img-container">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=350&q=80" alt="Er. Jahid">
+        </div>
+        <div class="faculty-info">
+          <h3>Er. Jahid</h3>
+          <span>Co-Founder & Lead AI Instructor</span>
+          <p>B.Tech in Computer Science & AI researcher. Jahid is passionate about building future skills labs in rural districts, bringing coding literacy to student hubs in Uttar Pradesh.</p>
+        </div>
+      </div>
+
+      <!-- 2. Dr. S. K. Gupta -->
+      <div class="faculty-card tilt-card">
+        <div class="faculty-img-container">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=350&q=80" alt="Dr. S. K. Gupta">
+        </div>
+        <div class="faculty-info">
+          <h3>Dr. S. K. Gupta</h3>
+          <span>Senior Physics Mentor</span>
+          <p>Ph.D in Physics with 12+ years of research and competitive JEE/NEET teaching. Dr. Gupta simplifies classical mechanics, electromagnetic vectors, and modern physics.</p>
+        </div>
+      </div>
+
+      <!-- 3. Prof. Ramesh Pandey -->
+      <div class="faculty-card tilt-card">
+        <div class="faculty-img-container">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=350&q=80" alt="Prof. Ramesh Pandey">
+        </div>
+        <div class="faculty-info">
+          <h3>Prof. Ramesh Pandey</h3>
+          <span>Mathematics Coordinator</span>
+          <p>M.Sc in Mathematics & IIT JAM Qualifier. Prof. Ramesh guides students to decode board geometry, calculus, and analytical trigonometry formulas.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==========================================
+         SECTION 2: DUAL-PEDAGOGY FOCUS DETAIL
+         ========================================== -->
+    <div class="about-grid" style="margin-top: 6rem;" data-aos="fade-up">
+      <div class="about-text">
+        <h3>Integrated Board + Tech Mentorship Method</h3>
+        <p>At Sankalp Digital Pathshala, we believe teachers must serve as practical mentors. Rather than traditional chalk-and-talk lectures, our team uses digital interactive screens, circuit diagrams, and interactive simulator code blocks. Our educators maintain deep academic connections with regional boards (UP Board and CBSE) while maintaining industry-level coding awareness in web design and hardware operations.</p>
+        <p>Our weekly faculty workshops review student progress, construct mock tests, customize study materials, and ensure every student gets focused personal guidance. Parents can schedule weekly counseling sessions with our instructors to evaluate their child's academic and technical growth.</p>
+      </div>
+      <div class="about-visual">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Teacher Mentoring Students" class="tilt-card" style="border-radius: 20px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Chatbot Floating Widget -->
+  <%- include('../components/chat-widget.html') %>
+
+  <!-- Shared Footer -->
+  <%- include('../components/footer.html') %>
+
+  <!-- Include Global Scripts -->
+  <%- include('../components/scripts.html') %>
+  <script src="/js/app.js"></script>
+  <script src="/js/animations.js"></script>
+
+</body>
+</html>
